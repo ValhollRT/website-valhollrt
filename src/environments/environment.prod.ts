@@ -1,3 +1,9 @@
+
 export const environment = {
-  production: true
+  production: true,
+  server: {
+    ip: "80",
+    host: "https://valhollrt.com/",
+    api: 'api'
+  }
 };

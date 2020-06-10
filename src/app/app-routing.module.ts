@@ -5,9 +5,11 @@ import { HomeComponent } from './pages/home/home.component';
 import { GetStartedComponent } from './pages/get-started/get-started.component';
 import { PlatformComponent } from './pages/platform/platform.component';
 import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
+import { SuggestionBoardComponent } from './pages/suggestion-board/suggestion-board.component';
 
 
 const routes: Routes = [
+  { path: 'suggestion-board', component: SuggestionBoardComponent },
   { path: 'platform', component: PlatformComponent },
   { path: 'get-started', component: GetStartedComponent },
   { path: 'support-us', component: SupportUsComponent },
@@ -18,7 +20,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule, RouterModule.forRoot(routes)],
+  imports: [RouterModule, RouterModule.forRoot(routes,{ useHash: true })],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

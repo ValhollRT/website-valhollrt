@@ -1,0 +1,38 @@
+<div class="inner">
+    <h1>Suggestion board</h1>
+    <h4>I want to listen carrefully your ideas, this project will not be possible without your support, please write in
+        this board. every message will take a answer from my side, thanks :)</h4>
+
+    <div class="inner">
+        <div [ngClass]="{'open-form':this.openSuggestionForm == true}" class="container-form">
+            <form [formGroup]="suggestionForm" (ngSubmit)="onSubmit()">
+                <input [ngClass]="{'invalid-feedback':submitted && f.title.errors}" formControlName="title" type="text"
+                    placeholder="Title of the message">
+                <input [ngClass]="{'invalid-feedback':submitted && f.name.errors}" formControlName="name" type="text"
+                    placeholder="Your full name">
+                <textarea [ngClass]="{'invalid-feedback':submitted && f.message.errors}" formControlName="message"
+                    rows="4" cols="50" placeholder="Your message ..."></textarea>
+
+                <input type="submit" class="write-btn">
+            </form>
+        </div>
+        <button #closeBtn (click)=openForm() [ngClass]="{'close-write-btn':this.openSuggestionForm == true}"
+            class="write-btn">Write on board</button>
+        <div class="container" *ngFor="let suggestion of suggestions; let i = index">
+            <div class="card" (click)=expandSuggestion(i)>
+                <div style="display: inline-block;">
+                    <h4>{{suggestion.title}}</h4>
+                    <span style="line-height: 32px; margin-right: 5px;">{{suggestion.name}}</span>
+                    <span><small>{{suggestion.date | date}}</small></span>
+                </div>
+                <div style="float: right; clear: both;">
+                    <div [ngClass]="{'expand-chevron': suggestion.collapsed == false}" class="chevron">
+                        <i class="fas fa-angle-up"></i>
+                    </div>
+                </div>
+                <p style="clear:both;" class="collapse-paragraph"
+                    [ngClass]="{'expand-paragraph': suggestion.collapsed == false}">{{suggestion.message}}</p>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,5 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from "@angular/common/http";
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -15,6 +17,8 @@ import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.com
 import { FooterComponent } from './ui/footer/footer.component';
 import { NavbarComponent } from './ui/navbar/navbar.component';
 import { SectionComponent } from './ui/section/section.component';
+import { SuggestionBoardComponent } from './pages/suggestion-board/suggestion-board.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -26,11 +30,15 @@ import { SectionComponent } from './ui/section/section.component';
     PageNotFoundComponent,
     FooterComponent,
     NavbarComponent,
-    SectionComponent
+    SectionComponent,
+    SuggestionBoardComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
