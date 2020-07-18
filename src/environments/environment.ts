@@ -7,7 +7,7 @@ export const environment = {
   server: {
     ip: "80",
     host: "http://192.168.0.10/",
-    api: '/api'
+    api: 'api'
   }
 };
 

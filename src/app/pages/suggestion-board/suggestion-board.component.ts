@@ -74,15 +74,18 @@ export class SuggestionBoardComponent implements OnInit {
     console.log(this.suggestionForm.value);
     let newSuggestion: Suggestion = this.suggestionForm.value;
     this.http.post<Suggestion>(this.api + this.newSuggestionUrl, newSuggestion).subscribe(
+      r => {
+        this.getSuggestions().subscribe(s => {
+          this.suggestions = s;
+          this.suggestions.forEach(s => s.collapsed = true)
+          // confirm to the user the message is sended succefully
+          this.messageSended(newSuggestion);
+          this.submitted = false;
+          this.suggestionForm.reset();
+        });
+      }
     );
-    this.getSuggestions().subscribe(s => {
-      this.suggestions = s;
-      this.suggestions.forEach(s => s.collapsed = true)
-    });
-    // confirm to the user the message is sended succefully
-    this.messageSended(newSuggestion);
-    this.submitted = false;
-    this.suggestionForm.reset();
+
   }
 
   get f() { return this.suggestionForm.controls; }

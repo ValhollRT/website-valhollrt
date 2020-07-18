@@ -1,16 +1,106 @@
 footer {
     margin-bottom: 50px;
-
 }
-.footer-container{
+
+.footer-container {
     margin: 5px 50px;
     clear: both;
 }
-
-.menu-left{
+.footer-title-menu{
+    text-decoration: underline;
+    text-underline-position: under;
+    text-align: center;
+}
+.menu-left {
     float: left;
 }
 
-.menu-right{
+.menu-right {
     float: right;
+}
+
+ul {
+    padding: 0;
+    list-style: none;
+}
+
+.footer-social-icons {
+    width: 260px;
+    display: block;
+    margin: 0 auto;
+}
+
+.social-icon {
+    display: inline;
+    color: #fff;
+}
+
+ul.social-icons {
+    margin-top: 10px;
+}
+
+.social-icons li {
+    display: inline;
+}
+
+.social-icons a {
+    width: 260px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.social-icons-animation>li>a>i {
+    -o-transition: .5s;
+    -ms-transition: .5s;
+    -moz-transition: .5s;
+    -webkit-transition: .5s;
+    transition: .5s;
+}
+
+.social-icons-padding>li>a>i {
+    padding: 14px 14px;
+}
+
+.fa-instagram:hover {
+    background-color: #ff0f73;
+}
+
+.fa-twitter:hover {
+    background-color: #00aced;
+}
+
+.fa-envelope:hover {
+    background-color: #eb8231;
+}
+
+.fa-youtube:hover {
+    background-color: #e64a41;
+}
+
+.fa-linkedin:hover {
+    background-color: #0073a4;
+}
+
+.fa-github:hover {
+    background-color: #5a32a3;
+}
+
+
+.footer-link {
+    text-align: center;
+    color: white;
+    width: 260px;
+    display: block;
+    font-size: 12px;
+    padding: 5px;
+    -o-transition: .5s;
+    -ms-transition: .5s;
+    -moz-transition: .5s;
+    -webkit-transition: .5s;
+    transition: .5s;
+}
+
+.footer-link:hover {
+    background: var(--main-color-gold);
+    color: black;
 }

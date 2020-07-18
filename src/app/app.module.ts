@@ -19,6 +19,7 @@ import { NavbarComponent } from './ui/navbar/navbar.component';
 import { SectionComponent } from './ui/section/section.component';
 import { SuggestionBoardComponent } from './pages/suggestion-board/suggestion-board.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { OdinComponent } from './pages/odin/odin.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     FooterComponent,
     NavbarComponent,
     SectionComponent,
-    SuggestionBoardComponent
+    SuggestionBoardComponent,
+    OdinComponent
   ],
   imports: [
     BrowserModule,
