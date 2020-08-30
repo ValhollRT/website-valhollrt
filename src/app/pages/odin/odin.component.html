@@ -1,7 +1,7 @@
 <div>
     <div class="inner">
         <h1>Odin is Out!</h1>
-        <h4>Ver. 0.0.2 has been release!</h4>
+        <h4>{{this.gts.VERSION}} has been release!</h4>
         <div class="margin-paragraph">
             <div class="m-20">
                 <p>Check it Out now!
@@ -12,9 +12,38 @@
             </div>
         </div>
     </div>
+
+
     <div class="inner-t2 justify-paragraph-full">
+        <div class="margin-paragraph">
+            <div class="m-10">
+                <div *ngFor="let r of this.gts.listReleasedNotesVersion">
+                    <a target="_blank" [href]="this.gts.GITHUBTAGSLINK + r.version">Release {{r.version}}</a>
+                    <div class="m-10">
+                        <div *ngIf="r.taskFeatures"><strong>FEATURES</strong></div>
+                        <div *ngFor="let t of r.taskFeatures">
+                            <span>{{t.commit}}</span>
+                            <span>{{t.title}}</span>
+                        </div>
+                        <div class="m-10"></div>
+                        <div *ngIf="r.taskImprovements"><strong>IMPROVEMENTS</strong></div>
+                        <div *ngFor="let t of r.taskImprovements">
+                            <span>{{t.commit}}</span>
+                            <span>{{t.title}}</span>
+                        </div>
+                        <div class="m-10"></div>
+                        <div *ngIf="r.taskBugs"><strong>BUGS</strong></div>
+                        <div *ngFor="let t of r.taskBugs">
+                            <span>{{t.commit}}</span>
+                            <span>{{t.title}}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-
+    <div class="inner-t2 justify-paragraph-full">
         <div class="margin-paragraph">
             <div class="m-20">
                 <p>At the end, It has been released the first alpha testing of <strong>Odin</strong> Version 0.0.2 (What

@@ -20,6 +20,8 @@ import { SectionComponent } from './ui/section/section.component';
 import { SuggestionBoardComponent } from './pages/suggestion-board/suggestion-board.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { OdinComponent } from './pages/odin/odin.component';
+import { GeneralTextsService } from './service/general-texts.service';
+
 
 @NgModule({
   declarations: [
@@ -42,7 +44,7 @@ import { OdinComponent } from './pages/odin/odin.component';
     FormsModule,
     ReactiveFormsModule
   ],
-  providers: [],
+  providers: [GeneralTextsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
