@@ -44,12 +44,12 @@ export class GeneralTextsService {
     new ReleaseNoteVersion(
       "v0.0.3",
       new Set<Task>()
-        .add(new Task("[ODN-0001]", "Material Panel, and Edit Material in the current Tree node"))
-        .add(new Task("[ODN-0003]", "SideBar and content panel widget common"))
+        .add(new Task("[ODN-0003]", "New SideBar to content all common panels"))
+        .add(new Task("[ODN-0001]", "New material panel in Sidebar, to modify properties, diffuse color, ambient color, specular color / Power, and the name of material "))
         .add(new Task("[ODN-0007]", "Edit the names of the container in the Tree node")),
       new Set<Task>()
         .add(new Task("[ODN-0008]", "Move Console debug to the sidebar"))
-        .add(new Task("[ODN-0012]", "Tree Node Added Select Container in tree node binded with the currentMeshSelected service")))
+        .add(new Task("[ODN-0012]", "Select Container in Tree Node binded with the currentMeshSelected service")))
 
   ];
   constructor() { }
