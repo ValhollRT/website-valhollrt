@@ -32,7 +32,7 @@ export enum CategoryReleaseNote {
   providedIn: 'root'
 })
 export class GeneralTextsService {
-  public VERSION: string = "Ver. 0.0.3";
+  public VERSION: string = "Ver. 0.0.4";
   public ODIN: string = "Odin";
   public FEATURE: CategoryReleaseNote.FEATURE;
   public IMPROVEMENTS: CategoryReleaseNote.IMPROVEMENTS;
@@ -49,7 +49,14 @@ export class GeneralTextsService {
         .add(new Task("[ODN-0007]", "Edit the names of the container in the Tree node")),
       new Set<Task>()
         .add(new Task("[ODN-0008]", "Move Console debug to the sidebar"))
-        .add(new Task("[ODN-0012]", "Select Container in Tree Node binded with the currentMeshSelected service")))
+        .add(new Task("[ODN-0012]", "Select Container in Tree Node binded with the currentMeshSelected service"))),
+
+    new ReleaseNoteVersion(
+      "v0.0.4",
+      new Set<Task>()
+        .add(new Task("[ODN-0002]", "Create basic lights in Menu tool and Handle in Tree node.vWe can create Directional, spot, point and hemisphere Lights. For now only intensity specular and diffuse in a new light panel."))
+        .add(new Task("[ODN-0006]", "Added hide unhide option for containers in Tree node."))
+        .add(new Task("[ODN-0011]", " Delete Container in Tree Node.")))
 
   ];
   constructor() { }
