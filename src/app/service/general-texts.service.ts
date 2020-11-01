@@ -32,7 +32,7 @@ export enum CategoryReleaseNote {
   providedIn: 'root'
 })
 export class GeneralTextsService {
-  public VERSION: string = "Ver. 0.0.4";
+  public VERSION: string = "Ver. 0.0.5";
   public ODIN: string = "Odin";
   public FEATURE: CategoryReleaseNote.FEATURE;
   public IMPROVEMENTS: CategoryReleaseNote.IMPROVEMENTS;
@@ -56,7 +56,19 @@ export class GeneralTextsService {
       new Set<Task>()
         .add(new Task("[ODN-0002]", "Create basic lights in Menu tool and Handle in Tree node.vWe can create Directional, spot, point and hemisphere Lights. For now only intensity specular and diffuse in a new light panel."))
         .add(new Task("[ODN-0006]", "Added hide unhide option for containers in Tree node."))
-        .add(new Task("[ODN-0011]", " Delete Container in Tree Node.")))
+        .add(new Task("[ODN-0011]", " Delete Container in Tree Node."))),
+
+    new ReleaseNoteVersion(
+      "v0.0.5",
+      null,
+      new Set<Task>()
+        .add(new Task("[ODN-0019]", "Unify styles from light and material panel in common style"))
+        .add(new Task("[ODN-0015]", "Replace text label Tool Menu by icons in the side of Tree node Menu"))
+        .add(new Task("[ODN-0023]", "Refactor CanvasHelper class to service "))
+        .add(new Task("[ODN-0025]", "Hide Transform panel properties when is selected a hemisphereLight in Tree Node ")),
+      new Set<Task>()
+        .add(new Task("[ODN-0009]", "Fix decimal numbers from transform tool to 3 digits"))
+        .add(new Task("[ODN-0004]", "Transform tool dont refresh value in Mesh Rotation")))
 
   ];
   constructor() { }
