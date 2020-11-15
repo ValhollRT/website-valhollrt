@@ -1,4 +1,4 @@
-import { Injectable, VERSION } from '@angular/core';
+import { Injectable } from '@angular/core';
 
 export class ReleaseNoteVersion {
   public version: string;
@@ -32,7 +32,7 @@ export enum CategoryReleaseNote {
   providedIn: 'root'
 })
 export class GeneralTextsService {
-  public VERSION: string = "Ver. 0.0.5";
+  public VERSION: string = "Ver. 0.0.6";
   public ODIN: string = "Odin";
   public FEATURE: CategoryReleaseNote.FEATURE;
   public IMPROVEMENTS: CategoryReleaseNote.IMPROVEMENTS;
@@ -68,8 +68,21 @@ export class GeneralTextsService {
         .add(new Task("[ODN-0025]", "Hide Transform panel properties when is selected a hemisphereLight in Tree Node ")),
       new Set<Task>()
         .add(new Task("[ODN-0009]", "Fix decimal numbers from transform tool to 3 digits"))
-        .add(new Task("[ODN-0004]", "Transform tool dont refresh value in Mesh Rotation")))
+        .add(new Task("[ODN-0004]", "Transform tool dont refresh value in Mesh Rotation"))),
 
+    new ReleaseNoteVersion(
+      "v0.0.6",
+      new Set<Task>()
+        .add(new Task("[ODN-0031]", "Set Atl key to orbit camera in viewport"))
+        .add(new Task("[ODN-0033]", "Create button Clear for console panel"))
+        .add(new Task("[ODN-0035]", "Updated engine to BabylonJs 4.2.0"))
+        .add(new Task("[ODN-0020]", " Move the axis rendered in the origin of the World, on a corner of the panel"))
+        .add(new Task("[ODN-0028]", "Geometry properties panel")),
+      new Set<Task>()
+        .add(new Task("[ODN-0032]", "Improve performance in the viewport"))
+        .add(new Task("[ODN-0029]", "Replace glow in selection geometry by edge highlight")),
+    new Set<Task>()
+      .add(new Task("[ODN-0034]", "Lost highlight mesh, when manipulator tool is in use")))
   ];
   constructor() { }
 
